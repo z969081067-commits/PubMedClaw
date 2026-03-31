@@ -24,8 +24,9 @@ PubMedClaw 是专为 OpenClaw 打造的自动化文献检索技能（Skill）。
 
 PowerShell
 python -m pip install -r "scripts\requirements.txt"
+
 3. 装载至 OpenClaw
-将整个 PubMedClaw 文件夹放入你的 OpenClaw 技能目录（例如工作空间下的 skills/ 或全局的 ~/.openclaw/skills/）。重启或刷新 OpenClaw，pubmed_paper_finder 技能即可自动点亮。
+将整个 PubMedClaw 文件夹放入你的 OpenClaw 技能目录（例如workspace/skills/ 或全局的 ~/.openclaw/skills/）。重启或刷新 OpenClaw，pubmed_paper_finder 技能即可自动点亮。
 
 💬 调教与使用示例
 在 OpenClaw 的对话框中，你可以像指派实习生一样直接给它下达任务：
