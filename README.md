@@ -2,6 +2,7 @@ PubMedClaw: 专属 OpenClaw 的文献检索与下载神器
 还在为构建复杂的 PubMed 检索式头疼？或是为了整理和下载开源文献在网页间来回切换？
 
 PubMedClaw 是专为 OpenClaw 打造的自动化文献检索技能（Skill）。它能够将你的自然语言指令转化为精准的 PubMed 搜索，不仅能对检索结果进行智能的多维度打分排序，还能全自动帮你把 PMC（PubMed Central）上的开源 PDF 抓取到本地。让你的 Agent 真正成为得力的科研助手。
+<img width="1024" height="559" alt="image" src="https://github.com/user-attachments/assets/60850042-d6c2-40ab-889e-7499fdf8ec4b" />
 
 ✨ 核心亮点
 🗣️ 自然语言转高级检索：告别繁琐的 [Title/Abstract] AND ... 语法。直接告诉小龙虾你需要什么，它会自动提取关键词、同义词，并构建专业的检索式。
