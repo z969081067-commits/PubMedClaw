@@ -1,2 +1,40 @@
-# PubMedClaw
-Turn natural-language biomedical questions into PubMed searches, rank the best papers, and download available PMC full-text PDFs.
+PubMedClaw: 专属 OpenClaw 的文献检索与下载神器
+还在为构建复杂的 PubMed 检索式头疼？或是为了整理和下载开源文献在网页间来回切换？
+
+PubMedClaw 是专为 OpenClaw 打造的自动化文献检索技能（Skill）。它能够将你的自然语言指令转化为精准的 PubMed 搜索，不仅能对检索结果进行智能的多维度打分排序，还能全自动帮你把 PMC（PubMed Central）上的开源 PDF 抓取到本地。让你的 Agent 真正成为得力的科研助手。
+
+✨ 核心亮点
+🗣️ 自然语言转高级检索：告别繁琐的 [Title/Abstract] AND ... 语法。直接告诉小龙虾你需要什么，它会自动提取关键词、同义词，并构建专业的检索式。
+
+📈 多维度智能打分与排序：不只是简单的关键词匹配。系统会综合考量话题相关性、文章类型（自带 Review / Meta-analysis 高权重加成）、发表年份和受试物种，把最具参考价值的文献排在最前面。
+
+📥 一键提取与自动归档全文：检索后，只需吩咐一句“下载第 X 篇”，程序就会自动去 PMC 寻找并下载对应的 PDF 全文，并以你的检索主题为名在桌面建好专属文件夹，全程无感。
+
+⚡ 开箱即用，零门槛接入：无需繁琐地去 NCBI 申请 API Key，利用官方公开接口即可直接使用。
+
+🛠️ 安装指南
+本技能目前专为 Windows (win32) 环境设计，底层依赖原生的 PowerShell 及 Python。
+
+1. 环境准备
+请确保你的设备已安装 Python（终端中输入 python 或 py 能够正常执行）。
+
+2. 安装依赖包
+打开终端，进入本 Skill 所在的 scripts 目录，安装必需的 HTTP 网络请求库：
+
+PowerShell
+python -m pip install -r "scripts\requirements.txt"
+3. 装载至 OpenClaw
+将整个 PubMedClaw 文件夹放入你的 OpenClaw 技能目录（例如工作空间下的 skills/ 或全局的 ~/.openclaw/skills/）。重启或刷新 OpenClaw，pubmed_paper_finder 技能即可自动点亮。
+
+💬 调教与使用示例
+在 OpenClaw 的对话框中，你可以像指派实习生一样直接给它下达任务：
+
+场景一：精准搜文献
+"帮我找一下近 5 年关于生物信息学（bioinformatics）在肿瘤研究应用的综述文献，按关联度排序，给我挑最好的前 5 篇。"
+
+小龙虾会迅速返回一个带编号的文献列表，包含 DOI、所属期刊、发表年份，以及这篇文献契合你要求的简短理由（例如：匹配了综述类型、年份符合要求等）。
+
+场景二：全自动下载
+"把刚才列表里的第 1 篇和第 3 篇下载到我的电脑上。"
+
+小龙虾会在你的桌面上新建一个主题文件夹，将 PDF 全文乖乖存入其中。如果遇到非开源（Paywall）文献，它也会清晰地汇报失败原因及原链，方便你后续手动获取。
