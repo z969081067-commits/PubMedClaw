@@ -1,3 +1,5 @@
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![Python](https://img.shields.io/badge/python-3.x-blue.svg)
 PubMedClaw: 专属 OpenClaw 的文献检索与下载神器
 还在为构建复杂的 PubMed 检索式头疼？或是为了整理和下载开源文献在网页间来回切换？
 
